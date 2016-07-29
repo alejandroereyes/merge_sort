@@ -12,7 +12,6 @@ module Sort
       return multi_arr
     end
 
-    # Merge.conquer multi_arr
     multi_arr.each_with_object([]) do |elem, arr|
       arr << elem             if elem.length == 1
       arr << merge_sort(elem) if elem.length != 1
@@ -22,6 +21,6 @@ module Sort
   end
 end
 
-# puts "Sort.merge_sort [1, 2, 3] # => #{Sort.merge_sort [3, 1, 2]}"
+puts "Sort.merge_sort [1, 2, 3] # => #{Sort.merge_sort [3, 1, 2]}"
 puts ""
 puts "Sort.merge_sort [1, 2, 3] # => #{Sort.merge_sort [3, 1, 4, 2]}"
